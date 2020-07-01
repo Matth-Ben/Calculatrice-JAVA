@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
-    <item android:id="@+id/simple_item"
-        android:title="Simple"
-        android:parentActivityName="com.example.calculatrice.MainActivity" />
     <item android:id="@+id/scientifique_item"
         android:title="Scientifique"
-        android:parentActivityName="com.example.calculatrice.MainActivity"/>
+        android:parentActivityName="com.example.calculatrice.MainActivity"
+        android:onClick="layout_scientifique" />
 </menu>
