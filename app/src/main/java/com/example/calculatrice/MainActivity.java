@@ -22,13 +22,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         Toast.makeText(this, "Selected Item: " +item.getTitle(), Toast.LENGTH_SHORT).show();
-        switch (item.getItemId()) {
-            case R.id.scientifique_item:
-                // do your code
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+        if (item.getItemId() == R.id.scientifique_item) {// do your code
+            return true;
         }
+        return super.onOptionsItemSelected(item);
     }
 
     public void layout_scientifique(MenuItem item) {

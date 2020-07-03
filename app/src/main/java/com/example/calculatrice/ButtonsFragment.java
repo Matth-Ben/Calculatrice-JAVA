@@ -1,6 +1,5 @@
 package com.example.calculatrice;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -25,6 +24,8 @@ public class ButtonsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         View view =inflater.inflate(R.layout.fragment_buttons, container, false);
+        View view_edit =inflater.inflate(R.layout.fragment_textedit, container, false);
+        View view_text =inflater.inflate(R.layout.fragment_textview, container, false);
 
         button0 = (Button)view.findViewById(R.id.button0);
         button1 = (Button)view.findViewById(R.id.button1);
@@ -48,11 +49,10 @@ public class ButtonsFragment extends Fragment {
         buttonClearEdite = (Button)view.findViewById(R.id.buttoninutile);
         buttonC = (Button)view.findViewById(R.id.buttonclear);
         buttonEqual = (Button)view.findViewById(R.id.buttoneql);
-        crunchifyEditText = (EditText)view.findViewById(R.id.edt1);
-        crunchifyLastCalc = (TextView)view.findViewById(R.id.textlastcalc);
+        crunchifyEditText = (EditText)view_edit.findViewById(R.id.edt1);
+        crunchifyLastCalc = (TextView)view_text.findViewById(R.id.textlastcalc);
 
         button1.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 crunchifyEditText.setText(crunchifyEditText.getText() + "1");
@@ -60,7 +60,6 @@ public class ButtonsFragment extends Fragment {
         });
 
         button2.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 crunchifyEditText.setText(crunchifyEditText.getText() + "2");
@@ -68,7 +67,6 @@ public class ButtonsFragment extends Fragment {
         });
 
         button3.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 crunchifyEditText.setText(crunchifyEditText.getText() + "3");
@@ -76,7 +74,6 @@ public class ButtonsFragment extends Fragment {
         });
 
         button4.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 crunchifyEditText.setText(crunchifyEditText.getText() + "4");
@@ -84,7 +81,6 @@ public class ButtonsFragment extends Fragment {
         });
 
         button5.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 crunchifyEditText.setText(crunchifyEditText.getText() + "5");
@@ -92,7 +88,6 @@ public class ButtonsFragment extends Fragment {
         });
 
         button6.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 crunchifyEditText.setText(crunchifyEditText.getText() + "6");
@@ -100,7 +95,6 @@ public class ButtonsFragment extends Fragment {
         });
 
         button7.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 crunchifyEditText.setText(crunchifyEditText.getText() + "7");
@@ -108,7 +102,6 @@ public class ButtonsFragment extends Fragment {
         });
 
         button8.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 crunchifyEditText.setText(crunchifyEditText.getText() + "8");
@@ -116,7 +109,6 @@ public class ButtonsFragment extends Fragment {
         });
 
         button9.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 crunchifyEditText.setText(crunchifyEditText.getText() + "9");
@@ -124,7 +116,6 @@ public class ButtonsFragment extends Fragment {
         });
 
         button0.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 crunchifyEditText.setText(crunchifyEditText.getText() + "0");
@@ -132,7 +123,6 @@ public class ButtonsFragment extends Fragment {
         });
 
         buttonAdd.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
 
@@ -148,7 +138,6 @@ public class ButtonsFragment extends Fragment {
         });
 
         buttonSub.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 mValueOne = Float.parseFloat(crunchifyEditText.getText() + "");
@@ -159,7 +148,6 @@ public class ButtonsFragment extends Fragment {
         });
 
         buttonMul.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 mValueOne = Float.parseFloat(crunchifyEditText.getText() + "");
@@ -170,7 +158,6 @@ public class ButtonsFragment extends Fragment {
         });
 
         buttonDivision.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 mValueOne = Float.parseFloat(crunchifyEditText.getText() + "");
@@ -181,7 +168,6 @@ public class ButtonsFragment extends Fragment {
         });
 
         buttonRacine.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 mValueOne = Float.parseFloat(crunchifyEditText.getText() + "");
@@ -191,7 +177,6 @@ public class ButtonsFragment extends Fragment {
         });
 
         buttonCarre.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 mValueOne = Float.parseFloat(crunchifyEditText.getText() + "");
@@ -201,7 +186,6 @@ public class ButtonsFragment extends Fragment {
         });
 
         buttonSurX.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 mValueOne = Float.parseFloat(crunchifyEditText.getText() + "");
@@ -211,7 +195,6 @@ public class ButtonsFragment extends Fragment {
         });
 
         buttonPorcentage.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 mValueOne = Float.parseFloat(crunchifyEditText.getText() + "");
@@ -221,7 +204,6 @@ public class ButtonsFragment extends Fragment {
         });
 
         buttonEqual.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 mValueTwo = Float.parseFloat(crunchifyEditText.getText() + "");
@@ -268,7 +250,6 @@ public class ButtonsFragment extends Fragment {
         });
 
         button10.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 crunchifyEditText.setText(crunchifyEditText.getText() + ".");

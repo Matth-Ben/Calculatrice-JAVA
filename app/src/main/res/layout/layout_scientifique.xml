@@ -11,18 +11,27 @@
     <fragment
         android:id="@+id/fragmentTextView"
         class="com.example.calculatrice.TextViewFragment"
-        android:layout_width="match_parent"
-        android:layout_height="277dp"
-        tools:ignore="MissingConstraints" />
+        android:layout_width="408dp"
+        android:layout_height="145dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentTextEdit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout="@layout/fragment_textview" />
 
     <fragment
         android:id="@+id/fragmentTextEdit"
         class="com.example.calculatrice.TextEditFragment"
-        android:layout_width="325dp"
-        android:layout_height="220dp"
+        android:layout_width="330dp"
+        android:layout_height="98dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="43dp"
-        tools:layout_editor_absoluteY="32dp" />
+        tools:layout="@layout/fragment_textedit" />
 
     <fragment
         android:id="@+id/tableLayout"
@@ -32,6 +41,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout="@layout/fragment_buttons" />
 
 </android.support.constraint.ConstraintLayout>
