@@ -24,8 +24,6 @@ public class ButtonsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         View view =inflater.inflate(R.layout.fragment_buttons, container, false);
-        View view_edit =inflater.inflate(R.layout.fragment_textedit, container, false);
-        View view_text =inflater.inflate(R.layout.fragment_textview, container, false);
 
         button0 = (Button)view.findViewById(R.id.button0);
         button1 = (Button)view.findViewById(R.id.button1);
@@ -49,10 +47,12 @@ public class ButtonsFragment extends Fragment {
         buttonClearEdite = (Button)view.findViewById(R.id.buttoninutile);
         buttonC = (Button)view.findViewById(R.id.buttonclear);
         buttonEqual = (Button)view.findViewById(R.id.buttoneql);
-        crunchifyEditText = (EditText)view_edit.findViewById(R.id.edt1);
-        crunchifyLastCalc = (TextView)view_text.findViewById(R.id.textlastcalc);
+        crunchifyEditText = view.findViewById(R.id.edt1);
+        crunchifyLastCalc = view.findViewById(R.id.textlastcalc);
 
         button1.setOnClickListener(new View.OnClickListener() {
+            private static final String TAG = "MyActivity";
+
             @Override
             public void onClick(View v) {
                 crunchifyEditText.setText(crunchifyEditText.getText() + "1");

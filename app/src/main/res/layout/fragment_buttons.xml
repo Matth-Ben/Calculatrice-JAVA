@@ -1,8 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/tableLayout"
+    android:id="@+id/relative2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/textlastcalc"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_marginStart="354dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="535dp"
+        android:textColor="#673AB7"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edt1"
+        android:layout_width="330dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="484dp"
+        android:inputType="number"
+        android:textAlignment="textEnd"
+        android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TableLayout android:id="@+id/tableLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:textAlignment="center"
@@ -300,3 +335,4 @@
 
     </TableRow>
 </TableLayout>
+</android.support.constraint.ConstraintLayout>
